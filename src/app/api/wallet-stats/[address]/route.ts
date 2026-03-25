@@ -44,8 +44,8 @@ export async function GET(
             ],
             functionName: 'balanceOf',
             args: [address],
-          }).catch(() => 0n)
-        : Promise.resolve(0n),
+          }).catch(() => BigInt(0))
+        : Promise.resolve(BigInt(0)),
     ]);
 
     // 3. Simulated/Derived Metrics
@@ -64,7 +64,7 @@ export async function GET(
       uniqueContracts,
       firstTxAge, // noted as estimate
       blockNumber: blockNumber.toString(),
-      hasExistingFortune: fortuneBalance > 0n,
+      hasExistingFortune: fortuneBalance > BigInt(0),
       fetchedAt: Date.now(),
       note: "firstTxAge is a stable estimate derived from wallet entropy"
     };
