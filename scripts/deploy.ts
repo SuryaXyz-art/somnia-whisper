@@ -1,5 +1,5 @@
 import pkg from "hardhat";
-const { ethers } = pkg;
+const { ethers } = pkg as any;
 import { createPublicClient, createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { SDK } from "@somnia-chain/reactivity";
@@ -78,7 +78,7 @@ async function main() {
     handlerContractAddress: handlerAddress,
     priorityFeePerGas: parseGwei('2'),
     maxFeePerGas: parseGwei('10'),
-    gasLimit: 2_000_000n,
+    gasLimit: BigInt(2_000_000),
     isGuaranteed: true,
     isCoalesced: false,
   });
