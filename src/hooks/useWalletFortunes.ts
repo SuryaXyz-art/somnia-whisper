@@ -38,7 +38,7 @@ export function useWalletFortunes() {
 
   const { data: tokenIdsResult, isLoading: isLoadingIds, refetch: refetchIds } = useReadContracts({
     contracts: tokenIndexCalls,
-    query: { enabled: !!balance && balance > 0n },
+    query: { enabled: !!balance && balance > BigInt(0) },
   });
 
   // 3. Fetch Token URIs
@@ -85,7 +85,7 @@ export function useWalletFortunes() {
       
       setFortunes(decoded);
       setIsDecoding(false);
-    } else if (balance === 0n) {
+    } else if (balance === BigInt(0)) {
       setFortunes([]);
     }
   }, [urisResult, tokenIdsResult, balance]);
