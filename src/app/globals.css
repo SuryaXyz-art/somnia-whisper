@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 7, 8, 15;
+  --background-end-rgb: 7, 8, 15;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom right,
+      #07080f,
+      #0e1120,
+      #07080f
+    );
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Mystical Animations */
+@keyframes rainbow {
+  0% { border-color: #ff0000; }
+  20% { border-color: #ff00ff; }
+  40% { border-color: #0000ff; }
+  60% { border-color: #00ffff; }
+  80% { border-color: #00ff00; }
+  100% { border-color: #ff0000; }
+}
+
+@keyframes hueRotate {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+.animate-rainbow {
+  animation: rainbow 3.s linear infinite, hueRotate 3s linear infinite;
+  border-width: 2px !important;
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) border-box !important;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% {
+    transform: translateY(-120vh) translateX(40px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+/* Starfield Background */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, #0e1120, #07080f);
+  opacity: 0.15;
+}
+
+.starfield::before, .starfield::after, .star-layer-3 {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 150px 100px, #fff, transparent),
+    radial-gradient(2px 2px at 300px 500px, #fff, transparent),
+    radial-gradient(1px 1px at 600px 200px, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 800px 700px, #fff, transparent);
+  background-size: 800px 800px;
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.starfield::after {
+  background-size: 600px 600px;
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.star-layer-3 {
+  background-size: 1000px 1000px;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #9333ea, #14b8a6);
+  transform-origin: 0%;
+  z-index: 100;
+}

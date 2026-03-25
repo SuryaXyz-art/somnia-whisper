@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "NEXT_PUBLIC_SOMNIA_RPC": "https://dream-rpc.somnia.network",
+    "NEXT_PUBLIC_CHAIN_ID": "50312"
+  }
+}

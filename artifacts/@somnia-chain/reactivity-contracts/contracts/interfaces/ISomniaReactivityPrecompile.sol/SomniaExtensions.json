@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "SomniaExtensions",
+  "sourceName": "@somnia-chain/reactivity-contracts/contracts/interfaces/ISomniaReactivityPrecompile.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220ae8d69195ca1b206f07702b0f2ac7274c5fa9f3f9c2530554d5c3e23e6d3b0ba64736f6c634300081e0033",
+  "deployedBytecode": "0x5f80fdfea2646970667358221220ae8d69195ca1b206f07702b0f2ac7274c5fa9f3f9c2530554d5c3e23e6d3b0ba64736f6c634300081e0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Bytes",
+  "sourceName": "@openzeppelin/contracts/utils/Bytes.sol",
+  "abi": [],
+  "bytecode": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea264697066735822122049d90424f995b3404114504d6b8df52c45a20b0dd083b9e6a9819fb26951df9964736f6c634300081e0033",
+  "deployedBytecode": "0x5f80fdfea264697066735822122049d90424f995b3404114504d6b8df52c45a20b0dd083b9e6a9819fb26951df9964736f6c634300081e0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
