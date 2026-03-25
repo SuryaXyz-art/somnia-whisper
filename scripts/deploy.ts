@@ -28,7 +28,7 @@ async function main() {
   console.log("Deploying contracts with account:", deployer.address);
   console.log("Current balance:", ethers.formatEther(balance), "STT\n");
 
-  if (balance === 0n) {
+  if (balance === BigInt(0)) {
     throw new Error("Deployer account has no funds. Please get some STT from the faucet.");
   }
 
